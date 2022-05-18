@@ -1,0 +1,14 @@
+/**
+ * Place your custom CSS styles here.
+ **/
+.box{
+    padding: 5px;
+    width: 300px;
+    max-height: 500px;
+}
+.div_title{
+    font-size: 11px;
+}
+.form-check{
+    padding-left: 32px;
+}
