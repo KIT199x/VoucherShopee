@@ -27,6 +27,10 @@ $(".btn-login").click(function(){
 			}
 		});
 })
+$('.rigister').click(function(){
+	$('.login').addClass('d-none');
+	$('.form-register').removeClass('d-none');
+})
 function init(){	
 	var check=localStorage.getItem("checkbox");
 	if(check!="0"&& check!=null){
