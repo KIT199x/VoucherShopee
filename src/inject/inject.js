@@ -46,18 +46,27 @@ $('.btn-register').click(function(){
 	var email=$('.emailreg').val();
 	var username=$('.usernamereg').val();
 	var password=$('.passwordreg').val();
+	var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 	if(email=="" || email==undefined){
 		alert("Email không được để trống");
 		return false;
-	}	
+	}
+	if (!email.match(validRegex)) {
+		alert("Email không đúng định dạng");
+		return false;
+	}
 	if(username=="" || username==undefined){
-		alert("Tài khoản không được để trống");
+		alert("Tên đăng nhập không được để trống");
 		return false;
 	}	
 	if(password=="" || password==undefined){
 		alert("Mật khẩu không được để trống");
 		return false;
-	}	
+	}		
+	if(password.length<6){
+		alert("Mật khẩu phải dài hơn 6 ký tự");
+		return false;
+	}
 	var data= JSON.stringify({ 
 		company: "KIT",
 		Email: email,
