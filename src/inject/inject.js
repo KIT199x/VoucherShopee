@@ -121,7 +121,6 @@ function getVoucher(){
 						Ngày kết thúc: '+dateEnd+'</br>\
 					</div>'
 			}
-			rs=html
 			$(".response_voucher").html(html)
 		});
 }
@@ -134,7 +133,7 @@ function copyToClipboard(text) {
     document.body.removeChild(sampleTextarea);
 }
 function init(){
-	$('[data-toggle="tooltip"]').tooltip()
+	$('[data-toggle="tooltip"]').tooltip();
 	var check=localStorage.getItem("checkbox");
 	if(check!="0"&& check!=null){
 		$('.login').addClass('d-none');
@@ -144,7 +143,6 @@ function init(){
 	date=date.toLocaleString('vi-VN');
 	date=date.split(',')[1]
 	$('.date').html(date);
-	var rs="";
 	getVoucher();
 }
 init();
